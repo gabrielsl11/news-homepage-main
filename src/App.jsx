@@ -18,13 +18,13 @@ function App() {
       <nav>
         <img className='logo' src={logo} alt='Logo' />
         <Menu onClick={onMenuClick} className='menu' />
-        <X onClick={onMenuClick} size={32} className={menuOpen ? 'x open' : 'x'} />
         <ul className={menuOpen ? 'nav open' : 'nav'} >
           <li><a href='/'>Home</a></li>
           <li><a href='/'>New</a></li>
           <li><a href='/'>Popular</a></li>
           <li><a href='/'>Trending</a></li>
           <li><a href='/'>Categories</a></li>
+          <X onClick={onMenuClick} size={32} className={menuOpen ? 'x open' : 'x'} />
         </ul>
       </nav>
 
