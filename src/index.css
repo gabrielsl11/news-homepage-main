@@ -21,6 +21,7 @@
   box-sizing: border-box;
   font-family: "Inter", Arial, sans-serif;
   text-decoration: none;
+  user-select: none;
   list-style: none;
 }
 
