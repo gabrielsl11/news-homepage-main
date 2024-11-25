@@ -72,7 +72,7 @@ nav {
     padding: 10rem 2rem;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35);
     z-index: 2;
-    transition: right 0.2s ease-in-out;
+    transition: right 0.35s ease-in-out;
   }
 }
 
