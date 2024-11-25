@@ -65,30 +65,19 @@ nav {
     position: fixed;
     background-color: var(--off-white);
     flex-direction: column;
-    right: 0;
+    right: -100%;
     top: 0;
     height: 100%;
-    width: 50%;
+    min-width: 35%;
     padding: 10rem 2rem;
-    display: none;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35);
     z-index: 2;
-
-    &::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 50%;
-      min-height: 100vh;
-      background-color: rgba(0, 0, 0, 0.35);
-      z-index: 1;
-    }
+    transition: right 0.2s ease-in-out;
   }
 }
 
 .nav.open {
-  display: flex;
+  right: 0;
 }
 
 .menu {
@@ -104,9 +93,9 @@ nav {
 }
 
 .x {
-  position: fixed;
+  position: absolute;
   color: var(--dark-grayish-blue);
-  right: 5%;
+  right: 12.5%;
   top: 7.5%;
   transition: color 0.2s ease-in-out;
   display: none;
@@ -121,6 +110,17 @@ nav {
 
 .x.open {
   display: flex;
+}
+
+.overlay::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
 .nav > li > a {
