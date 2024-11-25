@@ -99,8 +99,6 @@ nav {
   top: 7.5%;
   transition: color 0.2s ease-in-out;
   display: none;
-  z-index: 3;
-  display: none;
 
   &:hover {
     cursor: pointer;
@@ -112,15 +110,21 @@ nav {
   display: flex;
 }
 
-.overlay::before {
-  content: "";
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.35);
   z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.35s ease-in-out;
+  pointer-events: none;
+}
+
+.overlay.yes {
+  background-color: rgba(0, 0, 0, 0.45);
+  pointer-events: auto;
 }
 
 .nav > li > a {

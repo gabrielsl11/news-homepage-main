@@ -15,7 +15,8 @@ function App() {
 
   return (
     <>
-      <nav className={menuOpen ? 'overlay' : ''}>
+      <div onClick={onMenuClick} className={menuOpen ? 'overlay yes' : 'overlay'}></div>
+      <nav>
         <img className='logo' src={logo} alt='Logo' />
         <Menu onClick={onMenuClick} className='menu' />
         <ul className={menuOpen ? 'nav open' : 'nav'} >
